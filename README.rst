@@ -3,8 +3,8 @@ pmcpy: Python package for PartMC post-processing
 ================================================
 |doi| |docs| |GitHub| |binder| |license| |pepy|
 
-.. |doi| image:: https://zenodo.org/badge/341276703.svg
-   :target: https://zenodo.org/badge/latestdoi/341276703
+.. |doi| image:: https://zenodo.org/badge/409430865.svg
+   :target: https://zenodo.org/badge/latestdoi/409430865
 
 .. |docs| image:: https://readthedocs.org/projects/pmcpy/badge/?version=latest
    :target: https://pmcpy.readthedocs.io/en/latest/?badge=latest
