@@ -70,7 +70,7 @@ class load_pmc:
         mass_per_particle = self.ds["aero_particle_mass"].sum(dim="aero_species").values
         return (self.ds["aero_num_conc"].values*mass_per_particle).sum()
         
-    def get_mixing_state_index(self, group_list=None, drop_list=None, diversity=False):
+    def get_mixing_state_index(self, group_list=None, drop_list=None, part_mask=None, diversity=False):
         if group_list:
             particle_mass_ls = [self.ds["aero_particle_mass"].sel(aero_species = self.aero_species_to_idx(group)).values.sum(axis=0).reshape(1,-1) for group in group_list]
             particle_mass = np.concatenate(particle_mass_ls, axis=0)
@@ -87,7 +87,10 @@ class load_pmc:
             particle_mass = self.ds["aero_particle_mass"].sel(aero_species = aero_idx_ls).values
             num_conc = self.ds["aero_num_conc"].values
             mass_conc = particle_mass * num_conc
-            
+        
+        if part_mask is not None:
+            mass_conc = mass_conc[:,part_mask]
+        
         D_alpha, D_gamma, chi = get_chi(mass_conc.T)
         if diversity:
             return D_alpha, D_gamma, chi
@@ -96,3 +99,15 @@ class load_pmc:
     
     def get_gas_conc(self, group_list=None):
         return self.ds["gas_mixing_ratio"].sel(gas_species = self.gas_species_to_idx(group_list))     
+    
+    def get_diameter(self, dry=True):
+        if dry:
+            group = self.aero_species.copy()
+            group.remove("H2O")
+            aero_density = self.ds["aero_density"].sel(aero_species = self.aero_species_to_idx(group)).values.reshape(-1,1)
+            aero_particle_mass = self.ds["aero_particle_mass"].sel(aero_species = self.aero_species_to_idx(group)).values
+        else:
+            aero_density = self.ds["aero_density"].values.reshape(-1,1)
+            aero_particle_mass = self.ds["aero_particle_mass"].values
+        aero_volume_per_particle = (aero_particle_mass/aero_density).sum(axis=0)
+        return np.cbrt(aero_volume_per_particle*6.0/np.pi)
