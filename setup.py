@@ -16,7 +16,7 @@ with open("README.rst", "r") as fp:
 
 setup(
     name="pmcpy",
-    version="0.0.0",
+    version="0.0.1",
     author="Zhonghua Zheng",
     author_email="zhonghua.zheng@outlook.com",
     url="https://github.com/zzheng93/pmcpy",
