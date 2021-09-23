@@ -20,7 +20,7 @@ setup(
     author="Zhonghua Zheng",
     author_email="zhonghua.zheng@outlook.com",
     url="https://github.com/zzheng93/pmcpy",
-    description="Python package for PartMC post-processing",
+    description="A Python package for PartMC post-processing",
     long_description=long_description,
     license="MIT",
     classifiers=classifiers,

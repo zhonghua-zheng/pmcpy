@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-pmcpy: Python package for PartMC post-processing
+pmcpy: A Python package for PartMC post-processing
 ======================================================================================
 
 |doi| |docs| |GitHub| |binder| |license| |pepy|
