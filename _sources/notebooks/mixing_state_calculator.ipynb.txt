@@ -1,0 +1,89 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1c9ee557",
+   "metadata": {},
+   "source": [
+    "## mixing state calculator"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d185087a",
+   "metadata": {},
+   "source": [
+    "This script is used for calculating **[mixing state index](https://doi.org/10.5194/acp-13-11423-2013)**\n",
+    "- Step 1: upload your own csv file (each `row` is a `particle`, each `column` is a `species`)   \n",
+    "- Step 2: edit the `file_name` below\n",
+    "- Step 3: edit the `group_list`\n",
+    "\n",
+    "For exmaple, below is an exmaple with three `surrogate species`  \n",
+    "The definition of surrogate species is [here](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001500) (Figure 2) \n",
+    "\n",
+    "- surrogate species 1: \"BC\" and \"POM\"\n",
+    "- surrogate species 2: \"DUST\"\n",
+    "- surrogate species 3: \"SS\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a9cb7470",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "mixing state index: 0.9408323695414793\n",
+      "average particle (alpha) species diversity: 2.838147712915256\n",
+      "bulk population (gamma) species diversity: 2.9537462489849164\n"
+     ]
+    }
+   ],
+   "source": [
+    "file_name = \"sample_data.csv\"\n",
+    "group_list = [[\"BC\",\"POM\"],\n",
+    "              [\"DUST\"],\n",
+    "              [\"SS\"]]\n",
+    "\n",
+    "# ====== please don't change ======\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import pmcpy\n",
+    "\n",
+    "# load data\n",
+    "df = pd.read_csv(file_name)\n",
+    "# get matrix for calculation\n",
+    "da = np.concatenate([df[group].values.sum(axis=1).reshape(-1,1) for group in group_list],axis=1)\n",
+    "# calculate mixing state index\n",
+    "D_alpha, D_gamma, chi = pmcpy.get_chi(da)\n",
+    "print(\"mixing state index:\", chi)\n",
+    "print(\"average particle (alpha) species diversity:\", D_alpha)\n",
+    "print(\"bulk population (gamma) species diversity:\", D_gamma)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
