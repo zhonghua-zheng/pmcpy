@@ -13,7 +13,7 @@
    "id": "2a77c7b3",
    "metadata": {},
    "source": [
-    "This script is used to compare the pmcpy results with `urban_plume_process.F90`"
+    "This script is used to compare the pmcpy results with [urban_plume_process.F90](../src/urban_plume_process.F90)"
    ]
   },
   {
