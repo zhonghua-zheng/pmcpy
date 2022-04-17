@@ -1,5 +1,5 @@
 pmcpy: A Python package for PartMC post-processing
-------------------------------------------------
+--------------------------------------------------
 |doi| |docs| |GitHub| |binder| |license| |pepy|
 
 .. |doi| image:: https://zenodo.org/badge/409430865.svg

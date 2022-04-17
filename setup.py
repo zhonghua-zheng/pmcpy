@@ -25,5 +25,5 @@ setup(
     license="MIT",
     classifiers=classifiers,
     install_requires=['numpy', 'pandas', 'netcdf4', 'xarray'],
-    packages=find_packages()
+    packages=find_packages(),
     )
