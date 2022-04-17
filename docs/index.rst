@@ -33,21 +33,23 @@ Author: `Dr. Zhonghua Zheng <https://zzheng93.github.io/>`_
    :maxdepth: 2
    :caption: Overview
 
+   pages/about.md
    pages/installation.md
 
 .. toctree::
    :maxdepth: 2
    :caption: Tutorial
 
-   notebooks/tutorial.ipynb
+   notebooks/pmcpy_quickstart.ipynb
+   notebooks/mixing_state_calculator.ipynb
 
 .. toctree::
    :maxdepth: 2
    :caption: Reference
    
-   notebooks/mixing_state_calculator.ipynb
    notebooks/benchmarking.ipynb
-   notebooks/plotting_particles_demo.ipynb
+   pages/partmc_sample_data.ipynb
+   notebooks/particles_visualization.ipynb
 
 How to ask for help
 -------------------

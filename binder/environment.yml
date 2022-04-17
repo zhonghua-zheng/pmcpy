@@ -1,0 +1,16 @@
+channels:
+- conda-forge
+- defaults
+
+dependencies:
+- python=3.8.0
+- numpy
+- pandas
+- jupyterlab
+- matplotlib
+- xarray
+- pip
+- pip:
+  - netCDF4==1.5.8
+  - pmcpy
+name: pmcpy_env
