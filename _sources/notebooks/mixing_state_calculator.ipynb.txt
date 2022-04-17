@@ -21,9 +21,9 @@
     "**Step 2**: edit the `file_name` and `group_list` below   \n",
     "Below is an exmaple with three `surrogate species`  \n",
     "The definition of surrogate species is [here](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001500) (Figure 2)   \n",
-    "- surrogate species 1: \"BC\" and \"POM\"\n",
-    "- surrogate species 2: \"DUST\"\n",
-    "- surrogate species 3: \"SS\"\n",
+    "- surrogate species 1: \"BC\" and \"POM\"    \n",
+    "- surrogate species 2: \"DUST\"    \n",
+    "- surrogate species 3: \"SS\"    \n",
     "\n",
     "**Step 3**: click `Run` button above\n",
     "![upload](./figures/run_cell.png)"
