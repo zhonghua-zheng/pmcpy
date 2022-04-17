@@ -19,11 +19,10 @@
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="benchmarking" href="benchmarking.html" />
-    <link rel="prev" title="tutorial" href="tutorial.html" /> 
+    <link rel="prev" title="pmcpy quickstart" href="pmcpy_quickstart.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,17 +42,19 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/installation.html">Installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">tutorial</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pmcpy_quickstart.html">pmcpy quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mixing state calculator</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">mixing state calculator</a></li>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="benchmarking.html">benchmarking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotting_particles_demo.html">A exmaple of generating and plotting particles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/partmc_sample_data.html">format of PartMC raw output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="particles_visualization.html">particles visualization</a></li>
 </ul>
 
         </div>
@@ -354,19 +355,16 @@ div.rendered_html tbody tr:hover {
 <h1>mixing state calculator<a class="headerlink" href="#mixing-state-calculator" title="Permalink to this headline"></a></h1>
 <div class="line-block">
 <div class="line">This script is used for calculating <a class="reference external" href="https://doi.org/10.5194/acp-13-11423-2013">mixing state index</a></div>
-<div class="line">- Step 1: upload your own csv file (each <code class="docutils literal notranslate"><span class="pre">row</span></code> is a <code class="docutils literal notranslate"><span class="pre">particle</span></code>, each <code class="docutils literal notranslate"><span class="pre">column</span></code> is a <code class="docutils literal notranslate"><span class="pre">species</span></code>)</div>
-<div class="line">- Step 2: edit the <code class="docutils literal notranslate"><span class="pre">file_name</span></code> below</div>
-<div class="line">- Step 3: edit the <code class="docutils literal notranslate"><span class="pre">group_list</span></code></div>
+<div class="line"><strong>Step 1</strong>: upload your own csv file (each <code class="docutils literal notranslate"><span class="pre">row</span></code> is a <code class="docutils literal notranslate"><span class="pre">particle</span></code>, each <code class="docutils literal notranslate"><span class="pre">column</span></code> is the <code class="docutils literal notranslate"><span class="pre">mass</span></code> of a <code class="docutils literal notranslate"><span class="pre">species</span></code>)</div>
+<div class="line"><img alt="upload" src="../_images/run_cell.png" /></div>
 </div>
 <div class="line-block">
-<div class="line">For exmaple, below is an exmaple with three <code class="docutils literal notranslate"><span class="pre">surrogate</span> <span class="pre">species</span></code></div>
+<div class="line"><strong>Step 2</strong>: edit the <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and <code class="docutils literal notranslate"><span class="pre">group_list</span></code> below</div>
+<div class="line">Below is an exmaple with three <code class="docutils literal notranslate"><span class="pre">surrogate</span> <span class="pre">species</span></code></div>
 <div class="line">The definition of surrogate species is <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001500">here</a> (Figure 2)</div>
+<div class="line">- surrogate species 1: “BC” and “POM” - surrogate species 2: “DUST” - surrogate species 3: “SS”</div>
 </div>
-<ul class="simple">
-<li><p>surrogate species 1: “BC” and “POM”</p></li>
-<li><p>surrogate species 2: “DUST”</p></li>
-<li><p>surrogate species 3: “SS”</p></li>
-</ul>
+<p><strong>Step 3</strong>: click <code class="docutils literal notranslate"><span class="pre">Run</span></code> button above <img alt="upload" src="../_images/run_cell.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -409,7 +407,7 @@ bulk population (gamma) species diversity: 2.9537462489849164
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="tutorial.html" class="btn btn-neutral float-left" title="tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pmcpy_quickstart.html" class="btn btn-neutral float-left" title="pmcpy quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="benchmarking.html" class="btn btn-neutral float-right" title="benchmarking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -5,7 +5,7 @@
    "id": "331e5089",
    "metadata": {},
    "source": [
-    "## tutorial"
+    "## pmcpy quickstart"
    ]
   },
   {

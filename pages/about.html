@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; pmcpy 0.0.2 documentation</title>
+  <title>About &mdash; pmcpy 0.0.2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pmcpy quickstart" href="../notebooks/pmcpy_quickstart.html" />
-    <link rel="prev" title="About" href="about.html" /> 
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="pmcpy: A Python package for PartMC post-processing" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,8 +40,12 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relevant-publications">Relevant Publications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
 <ul>
@@ -69,9 +73,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Installation</li>
+      <li>About</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/pages/installation.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/pages/about.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -103,32 +107,29 @@
     text-align: unset;
 }
 </style>
-<section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
-<p>Step 1: create a conda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n pmcpy <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
-$ conda activate pmcpy
-$ conda install -c conda-forge numpy pandas xarray netcdf4
-</pre></div>
-</div>
-<p>Step 2: install using <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install pmcpy
-</pre></div>
-</div>
-<p>(optional) install from source::</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/zzheng93/pmcpy.git
-$ <span class="nb">cd</span> pmcpy
-$ python setup.py install
-</pre></div>
-</div>
+<section id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>This package is used to post-process <a class="reference external" href="https://github.com/compdyn/partmc">PartMC</a> data (see the <a class="reference external" href="./partmc_sample_data.html">reference</a> here). Additionally, a <a class="reference external" href="../notebooks/mixing_state_calculator.html">mixing state calculator</a> can be used to calculate the mixing state index.</p>
+<p>You can play with the mixing state calculator <a class="reference external" href="https://mybinder.org/v2/gh/zzheng93/pmcpy/HEAD?filepath=docs%2Fnotebooks">HERE</a></p>
+</section>
+<section id="relevant-publications">
+<h2>Relevant Publications<a class="headerlink" href="#relevant-publications" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Zheng, Z., Curtis, J. H., Yao, Y., Gasparik, J. T., Anantharaj, V. G., Zhao, L., et al. (2021). Estimating submicron aerosol mixing state at the global scale with machine learning and Earth system modeling. <em>Earth and Space Science</em>, 8, e2020EA001500. https://doi.org/10.1029/2020EA001500</p></li>
+<li><p>Zheng, Z., West, M., Zhao, L., Ma, P.-L., Liu, X., and Riemer, N.: Quantifying the structural uncertainty of the aerosol mixing state representation in a modal model, Atmos. Chem. Phys., 21, 17727–17741, https://doi.org/10.5194/acp-21-17727-2021, 2021.</p></li>
+<li><p>Riemer, N. and West, M.: Quantifying aerosol mixing state with entropy and diversity measures, Atmos. Chem. Phys., 13, 11423–11439, https://doi.org/10.5194/acp-13-11423-2013, 2013.</p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="about.html" class="btn btn-neutral float-left" title="About" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../notebooks/pmcpy_quickstart.html" class="btn btn-neutral float-right" title="pmcpy quickstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="pmcpy: A Python package for PartMC post-processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
