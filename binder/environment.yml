@@ -12,5 +12,5 @@ dependencies:
 - pip
 - pip:
   - netCDF4==1.5.8
-  - pmcpy
+  - pmcpy==0.0.2
 name: pmcpy_env
