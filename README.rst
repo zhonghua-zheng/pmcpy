@@ -23,9 +23,10 @@ pmcpy: A Python package for PartMC post-processing
 
 pmcpy is a **Python** package for `PartMC <https://github.com/compdyn/partmc>`_ post-processing.
 
+Author: `Dr. Zhonghua Zheng <https://zzheng93.github.io/>`_
+
 Installation
 ------------
-
 Step 1: create an environment::
 
     $ conda create -n pmcpy python=3.8
@@ -46,7 +47,7 @@ How to use it?
 --------------
 You may reproduce the jupyter notebook example on `Binder <https://mybinder.org/v2/gh/zzheng93/pmcpy/HEAD?filepath=docs%2Fnotebooks>`_.
 
-Please check `online documentation <https://pmcpy.readthedocs.io/en/latest/>`_ for more information.
+Please check `online documentation <https://zhonghuazheng.com/pmcpy/>`_ (or `Read the Docs <https://pmcpy.readthedocs.io/en/latest/>`_ version) for more information.
 
 How to ask for help
 -------------------
