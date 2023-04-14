@@ -17,7 +17,7 @@ $ pip install pmcpy
 (optional) install from source:: 
 
 ```bash
-$ git clone https://github.com/zzheng93/pmcpy.git
+$ git clone https://github.com/zhonghua-zheng/pmcpy.git
 $ cd pmcpy
 $ python setup.py install
 ```
