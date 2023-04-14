@@ -113,6 +113,32 @@ class load_pmc:
         else:
             return self.ds["aero_num_conc"].values.sum()
     
+    def get_aero_mass_conc(self, aero_species_ls, part_cond=None):
+        """get aerosol mass concentration of the selected species
+
+        Parameters
+        ----------
+        aero_species_ls : a list of string
+            a list of aerosol species, e.g., ["BC","OC"]
+
+        part_cond : a boolean numpy array, optional
+            a bolleann numpy with the same length of "aero_particle", by default None
+
+        Returns
+        -------
+        numpy.float64
+            [kg m^{-3}], aerosol mass concentration of the selected species
+        """
+        # get the mass per particle [kg]
+        mass_per_particle = self.ds["aero_particle_mass"].sel(aero_species = self.aero_species_to_idx(aero_species_ls)).values  
+        
+        # calcuate the mass concentration per particle, then add them up
+        if part_cond is not None:
+            # apply the additional condition
+            return (((self.ds["aero_num_conc"].values)*(mass_per_particle))[:,part_cond]).sum(axis=1)
+        else:
+            return ((self.ds["aero_num_conc"].values)*(mass_per_particle)).sum(axis=1)
+
     def get_mass_conc(self, dry=True, part_cond=None):
         """get mass concentration of the population
 
