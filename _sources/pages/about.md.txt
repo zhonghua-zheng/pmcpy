@@ -4,7 +4,7 @@
 
 This package is used to post-process [PartMC](https://github.com/compdyn/partmc) data (see the [reference](./partmc_sample_data.html) here). Additionally, a [mixing state calculator](../notebooks/mixing_state_calculator.html) can be used to calculate the mixing state index.
 
-You can play with the mixing state calculator [HERE](https://mybinder.org/v2/gh/zzheng93/pmcpy/HEAD?filepath=docs%2Fnotebooks)
+You can play with the mixing state calculator [HERE](https://mybinder.org/v2/gh/zhonghua-zheng/pmcpy/HEAD?filepath=docs%2Fnotebooks)
 
 ### Relevant Publications
 
