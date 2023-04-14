@@ -19,7 +19,7 @@ setup(
     version="0.0.3",
     author="Zhonghua Zheng",
     author_email="zhonghua.zheng@outlook.com",
-    url="https://github.com/zzheng93/pmcpy",
+    url="https://github.com/zhonghua-zheng/pmcpy",
     description="A Python package for PartMC post-processing",
     long_description=long_description,
     license="MIT",
