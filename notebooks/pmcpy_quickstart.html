@@ -12,6 +12,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -60,6 +62,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#gas-mixing-ratio">gas mixing ratio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mixing-state-index-calculation">mixing state index calculation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#particle-size-distribution-visualization-(number-concentration-v.s.-diameter)">particle size distribution visualization (number concentration v.s. diameter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#black-carbon-fraction-in-dry-particles">black carbon fraction in dry particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#black-carbon-core-volume">black carbon core volume</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mixing_state_calculator.html">mixing state calculator</a></li>
@@ -299,7 +303,7 @@ body.vscode-dark {
 }
 
 .xr-wrap {
-  display: block;
+  display: block !important;
   min-width: 300px;
   max-width: 700px;
 }
@@ -613,7 +617,7 @@ Coordinates:
   * gas_species  (gas_species) int32 17 11
 Attributes:
     unit:       ppb
-    long_name:  mixing ratios of gas species</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gas_mixing_ratio'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>gas_species</span>: 2</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-bdcd8b7a-c37a-4e5f-8dc7-ef5bab69712b' class='xr-array-in' type='checkbox' checked><label for='section-bdcd8b7a-c37a-4e5f-8dc7-ef5bab69712b' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>354.3 43.07</span></div><div class='xr-array-data'><pre>array([354.311384,  43.069374])</pre></div></div></li><li class='xr-section-item'><input id='section-1ff40a0f-9bc3-4353-99ba-8b6d59159160' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1ff40a0f-9bc3-4353-99ba-8b6d59159160' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>gas_species</span></div><div class='xr-var-dims'>(gas_species)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>17 11</div><input id='attrs-73cafc55-0b93-408d-8c40-077cd9c0f867' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-73cafc55-0b93-408d-8c40-077cd9c0f867' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8d4bfebf-639b-473c-8b8b-8ea279d7645b' class='xr-var-data-in' type='checkbox'><label for='data-8d4bfebf-639b-473c-8b8b-8ea279d7645b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>names :</span></dt><dd>H2SO4,HNO3,HCl,NH3,NO,NO2,NO3,N2O5,HONO,HNO4,O3,O1D,O3P,OH,HO2,H2O2,CO,SO2,CH4,C2H6,CH3O2,ETHP,HCHO,CH3OH,ANOL,CH3OOH,ETHOOH,ALD2,HCOOH,RCOOH,C2O3,PAN,ARO1,ARO2,ALK1,OLE1,API1,API2,LIM1,LIM2,PAR,AONE,MGLY,ETH,OLET,OLEI,TOL,XYL,CRES,TO2,CRO,OPEN,ONIT,ROOH,RO2,ANO2,NAP,XO2,XPAR,ISOP,ISOPRD,ISOPP,ISOPN,ISOPO2,API,LIM,DMS,MSA,DMSO,DMSO2,CH3SO2H,CH3SCH2OO,CH3SO2,CH3SO3,CH3SO2OO,CH3SO2CH2OO,SULFHOX</dd><dt><span>description :</span></dt><dd>dummy dimension variable (no useful value) - read species names as comma-separated values from the &#x27;names&#x27; attribute</dd></dl></div><div class='xr-var-data'><pre>array([17, 11], dtype=int32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a2edfb56-df61-455f-a759-83d1df87c320' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a2edfb56-df61-455f-a759-83d1df87c320' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>unit :</span></dt><dd>ppb</dd><dt><span>long_name :</span></dt><dd>mixing ratios of gas species</dd></dl></div></li></ul></div></div></div>
+    long_name:  mixing ratios of gas species</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'gas_mixing_ratio'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>gas_species</span>: 2</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-1b9835aa-e99d-492c-84b3-420cd301afb7' class='xr-array-in' type='checkbox' checked><label for='section-1b9835aa-e99d-492c-84b3-420cd301afb7' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>354.3 43.07</span></div><div class='xr-array-data'><pre>array([354.311384,  43.069374])</pre></div></div></li><li class='xr-section-item'><input id='section-007aa0ed-025c-4400-b0aa-42b29f13cb3b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-007aa0ed-025c-4400-b0aa-42b29f13cb3b' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>gas_species</span></div><div class='xr-var-dims'>(gas_species)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>17 11</div><input id='attrs-c8d396e9-bc57-49cc-a236-a38a6a5da45e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c8d396e9-bc57-49cc-a236-a38a6a5da45e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-696dda3c-1fdb-4fa2-a81b-b9054e786659' class='xr-var-data-in' type='checkbox'><label for='data-696dda3c-1fdb-4fa2-a81b-b9054e786659' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>names :</span></dt><dd>H2SO4,HNO3,HCl,NH3,NO,NO2,NO3,N2O5,HONO,HNO4,O3,O1D,O3P,OH,HO2,H2O2,CO,SO2,CH4,C2H6,CH3O2,ETHP,HCHO,CH3OH,ANOL,CH3OOH,ETHOOH,ALD2,HCOOH,RCOOH,C2O3,PAN,ARO1,ARO2,ALK1,OLE1,API1,API2,LIM1,LIM2,PAR,AONE,MGLY,ETH,OLET,OLEI,TOL,XYL,CRES,TO2,CRO,OPEN,ONIT,ROOH,RO2,ANO2,NAP,XO2,XPAR,ISOP,ISOPRD,ISOPP,ISOPN,ISOPO2,API,LIM,DMS,MSA,DMSO,DMSO2,CH3SO2H,CH3SCH2OO,CH3SO2,CH3SO3,CH3SO2OO,CH3SO2CH2OO,SULFHOX</dd><dt><span>description :</span></dt><dd>dummy dimension variable (no useful value) - read species names as comma-separated values from the &#x27;names&#x27; attribute</dd></dl></div><div class='xr-var-data'><pre>array([17, 11], dtype=int32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-9a7edd99-316b-4b2a-b63a-1a51ee63cc1a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9a7edd99-316b-4b2a-b63a-1a51ee63cc1a' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>unit :</span></dt><dd>ppb</dd><dt><span>long_name :</span></dt><dd>mixing ratios of gas species</dd></dl></div></li></ul></div></div></div>
 </div>
 </section>
 <section id="mixing-state-index-calculation">
@@ -654,7 +658,7 @@ Attributes:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.6471920046172537
+0.6471920046172539
 </pre></div></div>
 </div>
 <p>specific <code class="docutils literal notranslate"><span class="pre">range</span> <span class="pre">of</span> <span class="pre">diameters</span></code> and display <code class="docutils literal notranslate"><span class="pre">diversity</span></code> (<span class="math notranslate nohighlight">\(D_\alpha\)</span>, <span class="math notranslate nohighlight">\(D_\gamma\)</span>, <span class="math notranslate nohighlight">\(\chi\)</span>)</p>
@@ -674,7 +678,7 @@ Attributes:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(3.1876143541221276, 4.355134759609095, 0.6520198176412458)
+(3.1876143541221267, 4.355134759609094, 0.6520198176412457)
 </pre></div></div>
 </div>
 </section>
@@ -739,6 +743,95 @@ Attributes:
 <div class="output_area docutils container">
 <img alt="../_images/notebooks_pmcpy_quickstart_25_0.png" src="../_images/notebooks_pmcpy_quickstart_25_0.png" />
 </div>
+</div>
+</section>
+<section id="black-carbon-fraction-in-dry-particles">
+<h2>black carbon fraction in dry particles<a class="headerlink" href="#black-carbon-fraction-in-dry-particles" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get dry species per parctile</span>
+<span class="n">all_aero_species</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">aero_species</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dry_aero_species</span> <span class="o">=</span> <span class="n">all_aero_species</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dry_aero_species</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;H2O&quot;</span><span class="p">)</span>
+<span class="n">mass_per_dry_particle</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">&quot;aero_particle_mass&quot;</span><span class="p">]</span>\
+                           <span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">aero_species</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">aero_species_to_idx</span><span class="p">(</span><span class="n">dry_aero_species</span><span class="p">))</span>\
+                           <span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;aero_species&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># get black carbon mass per particle</span>
+<span class="n">bc_per_particle</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">&quot;aero_particle_mass&quot;</span><span class="p">]</span>\
+                     <span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">aero_species</span><span class="o">=</span><span class="n">pmc</span><span class="o">.</span><span class="n">aero_species_to_idx</span><span class="p">([</span><span class="s2">&quot;BC&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bc_per_particle</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([0.00000000e+00, 0.00000000e+00, 0.00000000e+00, ...,
+       5.78304546e-20, 0.00000000e+00, 0.00000000e+00])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bc_frac_per_dry_particle</span> <span class="o">=</span> <span class="n">bc_per_particle</span> <span class="o">/</span> <span class="n">mass_per_dry_particle</span>
+<span class="p">(</span><span class="n">bc_frac_per_dry_particle</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+269
+</pre></div></div>
+</div>
+</section>
+<section id="black-carbon-core-volume">
+<h2>black carbon core volume<a class="headerlink" href="#black-carbon-core-volume" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BC_density</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">&quot;aero_density&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">aero_species</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">aero_species_to_idx</span><span class="p">([</span><span class="s2">&quot;BC&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">values</span>
+<span class="n">BC_density</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([1800.])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># volume = mass / density</span>
+<span class="n">pmc</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">&quot;aero_particle_mass&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">aero_species</span> <span class="o">=</span> <span class="n">pmc</span><span class="o">.</span><span class="n">aero_species_to_idx</span><span class="p">([</span><span class="s2">&quot;BC&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">values</span> <span class="o">/</span> <span class="n">BC_density</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[0.00000000e+00, 0.00000000e+00, 0.00000000e+00, ...,
+        3.21280303e-23, 0.00000000e+00, 0.00000000e+00]])
+</pre></div></div>
 </div>
 </section>
 </section>
